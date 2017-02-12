@@ -9,12 +9,19 @@ Created on Tue Oct 25 17:43:30 2016
 
 import numpy as np
 
-a=np.matrix('1 2;3 4')
-b=np.matrix('1 2;3 4')
-print('Matrix A = ',a)
+a= [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+b = np.matrix('1 2 3;4 5 6;7 8 9')
+print('A = ',a)
 print('Matrix B = ',b)
 
-print('Matrix Sum A+B = ',a+b)
-print('Transpose of A = ', np.transpose(a))
 
-#Calculate inverse numpy.linalg.inv(x)
+print('Transpose of B = ', np.transpose(b))
+print('Inverse of B = ', np.transpose(b))
+print('sum of diagonals of B = ', sum(np.diagonal(b)))
+
+def mat_rot1():
+    a_rot = np.rot90(np.matrix(a))
+    print(a_rot)  
+    
+   
+
